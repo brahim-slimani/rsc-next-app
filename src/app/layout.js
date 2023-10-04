@@ -1,4 +1,5 @@
-import './home/globals.css'
+import { Links } from './(components)/links';
+import './home/globals.css';
 
 export const metadata = {
   title: 'Next.js',
@@ -6,13 +7,12 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <body>
         <section style={{ padding: "1rem" }}> <small>Master Header </small> | &nbsp;
-          <span><a href="/home">Home</a></span> | &nbsp;
-          <span><a href="/dashboard">Dashboard</a></span> | &nbsp;
-          <span><a href="/admin">Admin</a></span>&nbsp;
+         <Links />
         </section>
         <br />
         <>
