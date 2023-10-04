@@ -1,5 +1,5 @@
-import { Links } from './(components)/links';
-import './home/globals.css';
+import { Links } from '@/_components/links';
+import '@/app/home/globals.css';
 
 export const metadata = {
   title: 'Next.js',
