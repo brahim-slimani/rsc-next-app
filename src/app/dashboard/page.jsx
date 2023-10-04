@@ -1,8 +1,8 @@
-export default function MasterRoute() {
+export default function Dashboard() {
     return (
         <body>
             <div>
-                Hi! from root component!
+                Hi! from dashboard route!
             </div>
         </body>
     )
