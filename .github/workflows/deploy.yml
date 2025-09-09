@@ -9,7 +9,7 @@ on:
     inputs:
       env:
         type: choice
-        description: "Choose deployment environment"
+        description: "Choose deployment environment: "
         options:
           - Development
           - Acceptance
