@@ -4,22 +4,17 @@ on:
   push:
     branches:
       - dev
-      
+
   workflow_dispatch:
     inputs:
       env:
-        type: choice
-        description: "Choose deployment environment"
-        options:
-          - dev
-          - acc
-          - tst
-          - prd
+        description: "Choose deployment environment (dev, acc, tst, prd)"
+        required: true
+        default: dev
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    #environment: ${{ inputs.env }}
     steps:
       - name: Show selected environment
-        run: echo "The selected environment: ${{ inputs.env }}"
+        run: echo "The selected environment: ${{ github.event.inputs.env }}"
