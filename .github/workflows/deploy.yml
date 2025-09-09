@@ -1,0 +1,21 @@
+name: Build and Deploy app
+
+on:
+  push:
+    branches:
+      - dev
+
+  workflow_dispatch:
+    inputs:
+      env:
+        description: "Choose deployment environment (dev, acc, tst, prd)"
+        required: true
+        default: dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show selected environment
+        run: echo "Hello!"
+        #run: echo "The selected environment: ${{ github.event.inputs.env }}"
