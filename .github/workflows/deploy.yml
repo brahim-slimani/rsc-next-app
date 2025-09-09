@@ -26,5 +26,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show selected environment
-        #run: echo "Hello!"
-        run: echo "The selected environment:${{ inputs.env }}"
+        run: echo "The selected environment:${{ inputs.env || 'Development' }}"
