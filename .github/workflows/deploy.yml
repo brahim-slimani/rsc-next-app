@@ -8,9 +8,17 @@ on:
   workflow_dispatch:
     inputs:
       env:
-        description: "Choose deployment environment (dev, acc, tst, prd)"
-        required: false
-        default: dev
+        type: choice
+        description: "Choose deployment environment: "
+        options:
+          - Development
+          - Acceptance
+          - Testing
+          - Production
+      # env:
+      #   description: "Choose deployment environment (dev, acc, tst, prd)"
+      #   required: false
+      #   default: dev
 
 jobs:
   deploy:
