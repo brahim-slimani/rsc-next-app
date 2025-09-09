@@ -9,7 +9,7 @@ on:
     inputs:
       env:
         description: "Choose deployment environment (dev, acc, tst, prd)"
-        required: true
+        required: false
         default: dev
 
 jobs:
